@@ -1,7 +1,7 @@
 import PetBlogCard from "../../components/petBlogCard/PetBlogCard";
 
 import cuteDog from "../../assets/images/S5/dog.png";
-import cuteCat from "../../assets/Images/S5/cat.svg";
+import cuteCat from "../../assets/images/S5/cat.svg";
 import puppy from "../../assets/images/S5/Puppy.svg";
 import kitten from "../../assets/images/S5/kitten.svg";
 export default function BlogPet() {
