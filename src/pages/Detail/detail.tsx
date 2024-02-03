@@ -289,7 +289,7 @@ const Detail: FC = () => {
           )}
           <div className="mt-16">
             <h1 className="text-2xl md:text-4xl text-center text-purple-700">
-              More dogs from Guam Animals In Need
+              More dogs from {petDetail&&(<>{petDetail.organization_id}</>)} Animals In Need
             </h1>
             <div className="flex flex-wrap justify-center text-center">
               {orgData?.slice(6, 10)?.map((pet: resp, i: number) => {
