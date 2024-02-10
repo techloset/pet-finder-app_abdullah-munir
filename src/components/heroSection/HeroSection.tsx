@@ -3,7 +3,7 @@ import iconShelter from "../../assets/images/hero section/home.svg";
 import iconCat from "../../assets/images/hero section/cat.svg";
 import iconDog from "../../assets/images/hero section/dog.svg";
 import iconPaw from "../../assets/images/hero section/foot.svg";
-import HeroCard from "../../components/Card/heroCard";
+import HeroCard from "../heroCard/HeroCard";
 import "../../App.css";
 export default function HeroSection() {
   return (

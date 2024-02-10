@@ -1,7 +1,7 @@
 import React from "react";
 import Arrow from '../../assets/images/learnArrow/icon-Right.svg';
 
-const index: React.FC = () => {
+const Learn: React.FC = () => {
   return (
     <div className="bg-slate-100 py-3">
       <a
@@ -23,4 +23,4 @@ const index: React.FC = () => {
   );
 };
 
-export default index;
+export default Learn;

@@ -5,7 +5,7 @@ interface buttonTypes {
     cls?:string;
 }
 
-const button:FC<buttonTypes> = (props) => {
+const DetailButton:FC<buttonTypes> = (props) => {
   return (
     <button type="button" className={props.cls}>
       {props.txt}
@@ -13,4 +13,4 @@ const button:FC<buttonTypes> = (props) => {
   );
 };
 
-export default button;
+export default DetailButton;

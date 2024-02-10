@@ -1,4 +1,4 @@
-import PetBlogCard from "../../components/petBlogCard/PetBlogCard";
+import PetBlogCard from "../petBlogCard/PetBlogCard";
 
 import cuteDog from "../../assets/images/S5/dog.png";
 import cuteCat from "../../assets/images/S5/cat.svg";

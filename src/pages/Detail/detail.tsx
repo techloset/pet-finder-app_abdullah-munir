@@ -3,13 +3,12 @@ import { useParams } from "react-router-dom";
 import { getPetDetails } from "../../redux/slice/detailSlice";
 import { fetchOrganizationData } from "../../redux/slice/organizationSlice";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks/hooks";
-import Button from "../../components/detailButton/button";
+import Button from "../../components/detailButton/DetailButton";
 import PetCard from "../../components/petCard/PetCard";
-import OrgCard from "../../components/DetailOrgCard/OrgCard";
+import OrgCard from "../../components/detailOrgCard/DetailOrgCard";
 import { Link } from "react-router-dom";
 
-import "../../App.css";
-import "../../index.css";
+
 
 import AlertImg from "../../assets/images/DetailPg/icon-alert.svg";
 import FaviorteHeart from "../../assets/images/DetailPg/favIcon.svg";
@@ -57,7 +56,7 @@ const Detail: FC = () => {
       }
     };
     fetchData();
-  }, [dispatch, id, organization_id]);
+  }, [dispatch, id, organization_id,petDetail]);
 
   return (
     <div className="">

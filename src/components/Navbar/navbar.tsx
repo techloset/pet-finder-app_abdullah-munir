@@ -3,12 +3,12 @@ import logo from "../../assets/images/logo.png";
 import HeartIcon from "../../assets/images/nav/HeartIcon.svg";
 import ArrowUp from "../../assets/images/nav/Arrow.png";
 import Menu from "../../assets/images/nav/icon-menu.svg";
-import DropDown from "../DropDown/dropDown";
+import DropDown from "../dropDown/DropDown";
 
 import { Link } from "react-router-dom";
 import "../../App.css";
 
-export default function Header() {
+export default function Navbar() {
   const [isArrowUp, setIsArrowUp] = useState(false);
   const [showNav, setShowNav] = useState(false);
   const [isNavOpen, setIsNavOpen] = useState(false);

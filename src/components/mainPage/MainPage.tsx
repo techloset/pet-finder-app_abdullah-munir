@@ -4,9 +4,9 @@ import { getPetData } from "../../redux/slice/userSlice";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks/hooks";
 import likeIcon from "../../assets/images/S2/likeIcon.svg";
 import arrow from "../../assets/images/S2/Arrow.svg";
-import BlogPet from "../PetBlog/petBlog";
-import PetCard from "../../components/petCard/PetCard";
-import Card from "../../components/MainPgCard/card";
+import BlogPet from "../petBlog/PetBlog";
+import PetCard from "../petCard/PetCard";
+import Card from "../mainPgCard/MainPageCard";
 
 import Image1 from "../../assets/images/S3/P1.svg";
 import Image2 from "../../assets/images/S3/P2.svg";

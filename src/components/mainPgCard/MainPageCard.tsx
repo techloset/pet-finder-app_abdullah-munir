@@ -1,5 +1,5 @@
 import { FC } from "react";
-import Button from "../Button/button";
+import Button from "../button/Button"
 
 interface PropsType{
     src:string;
