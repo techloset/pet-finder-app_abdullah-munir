@@ -121,7 +121,6 @@ const Detail: FC = () => {
                     </div>
                     <div className="mt-10">
                       <div className="text-3xl px-7 py-5">About</div>
-                      <div className="text-xl px-7 ">Health</div>
                       <div className="px-7">{petDetail.description.slice(0,100)}</div>
                     </div>
                     <hr className="w-[90%] mx-auto mt-8 hidden sm:hidden  md:flex" />
