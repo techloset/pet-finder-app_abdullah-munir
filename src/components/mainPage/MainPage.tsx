@@ -36,7 +36,6 @@ const MainPage = () => {
     dispatch(getPetData());
   }, [dispatch]);
 
-
   return (
     <>
       <div className="grid grid-cols-12 text-purple-700 font-bold">
@@ -82,7 +81,10 @@ const MainPage = () => {
             </Link>
           );
         })}
-        <PetCard />
+        <PetCard
+          petCount="10137 more pets"
+          avalibality="available on Petfinder"
+        />
       </div>
       <div className="flex flex-wrap justify-center text-center ">
         <div className="w-auto mb-[79.59px] h-12 text-center text-neutral-600 text-[38px] uppercase leading-[45.60px]">
@@ -145,7 +147,10 @@ const MainPage = () => {
           );
         })}
 
-        <PetCard />
+        <PetCard
+          petCount="10137 more pets"
+          avalibality="available on Petfinder"
+        />
       </div>
       <BlogPet />
     </>

@@ -1,6 +1,12 @@
 import iconStrokedPaw from "../../assets/images/S2/p5.svg";
+import { FC } from "react";
 
-export default function PetCard() {
+interface PropsTypes {
+  petCount?: string;
+  avalibality?: string;
+}
+
+const PetCard: FC<PropsTypes> = (props) => {
   return (
     <>
       <div className="w-[231.20px] h-[301.20px] mb-[108px] mx-2 mt-6 bg-violet-800 rounded-[10px] shadow flex-col justify-center items-start inline-flex hover:shadow-2xl">
@@ -15,9 +21,9 @@ export default function PetCard() {
 
           <div className="self-stretch h-[39.19px] pl-[11.12px] pr-[10.94px] pt-px pb-[1.60px] justify-center items-center inline-flex">
             <div className="w-[149.14px] h-[36.59px] text-center text-white text-sm font-normal font-['Arial'] leading-tight">
-              10137 more pets
+              {props.petCount}
               <br />
-              available on Petfinder
+              {props.avalibality}
             </div>
           </div>
         </div>
@@ -30,6 +36,8 @@ export default function PetCard() {
           </div>
         </button>
       </div>
-    </>
+      </>
   );
-}
+};
+
+export default PetCard;

@@ -30,8 +30,8 @@ export async function fetchToken(clientId: string, clientSecret: string) {
 
 
 
-const CLIENT_ID = "cgGo3LpgXFRimR6cvMp397SvQkOnJ1ojwzcEQ5GTOTujmndlVV";
-const CLIENT_SECRET = "DHAcRPPycrUoRlhEIvqCIWx4BvAV6UXpFizdoUr4";
+const CLIENT_ID = "x6ty0NnOjoeXPkrGRLoMTXffnuhSLcsinNci8DV9bl4IlF4M9b";
+const CLIENT_SECRET = "mBD6eu0JvZ7bCYfCnsQRtBZ9hwobQEM3Q2UG7oie";
 
 fetchToken(CLIENT_ID, CLIENT_SECRET);
 

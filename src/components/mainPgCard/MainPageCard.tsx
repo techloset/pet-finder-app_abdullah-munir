@@ -8,7 +8,7 @@ interface PropsType{
     disc:string;
 }
 
-const card:FC<PropsType> = (props) => {
+const MainPageCard:FC<PropsType> = (props) => {
   return (
     <div className="text-center mx-[20.3px] my-2 md:my-0">
       <img
@@ -27,4 +27,4 @@ const card:FC<PropsType> = (props) => {
   );
 };
 
-export default card;
+export default MainPageCard;
