@@ -56,7 +56,7 @@ const Detail: FC = () => {
       }
     };
     fetchData();
-  }, [dispatch, id, organization_id,petDetail]);
+  }, [dispatch, id, organization_id]);
 
   return (
     <div className="">
