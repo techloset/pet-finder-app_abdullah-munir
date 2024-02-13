@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import FooterImg from "../../assets/images/Footer/SVG.svg";
-import Facebook from "../../assets/images/Footer/Facebook.png";
-import Twitter from "../../assets/images/Footer/Twitter.png";
-import Instagram from "../../assets/images/Footer/instagram.png";
-import Youtube from "../../assets/images/Footer/Youtube.svg";
-import Pinterset from "../../assets/images/Footer/Pinterset.svg";
-import Logo from "../../assets/images/Footer/Logo.png";
+import FooterImg from "../../assets/images/footer/FooterImg.svg";
+import Facebook from "../../assets/images/footer/Facebook.png";
+import Twitter from "../../assets/images/footer/Twitter.png";
+import Instagram from "../../assets/images/footer/Instagram.png";
+import Youtube from "../../assets/images/footer/Youtube.svg";
+import Pinterest from "../../assets/images/footer/Pinterest.svg";
+import Logo from "../../assets/images/footer/Logo.png";
 import ArrowUp from "../../assets/images/nav/Arrow.png";
 
 const Footer = () => {
@@ -415,7 +415,7 @@ const Footer = () => {
           <Link to={"/"}>
             <img
               className="h-[22px] w-[22px] mx-[15px]"
-              src={Pinterset}
+              src={Pinterest}
               alt=""
             />
           </Link>

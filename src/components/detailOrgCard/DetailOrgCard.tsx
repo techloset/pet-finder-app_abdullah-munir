@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { FC } from "react";
 
-import DefaultImg from "../../assets/images/Defalt/Defalt.svg";
+import DefaultImg from "../../assets/images/default/Default.svg";
 
 interface cardTypes {
   id: number;

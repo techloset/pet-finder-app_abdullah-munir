@@ -1,8 +1,8 @@
-import SearchIcon from "../../assets/images/hero section/searchIcon.svg";
-import iconShelter from "../../assets/images/hero section/home.svg";
-import iconCat from "../../assets/images/hero section/cat.svg";
-import iconDog from "../../assets/images/hero section/dog.svg";
-import iconPaw from "../../assets/images/hero section/foot.svg";
+import SearchIcon from "../../assets/images/heroSection/SearchIcon.svg";
+import iconShelter from "../../assets/images/heroSection/Home.svg";
+import iconCat from "../../assets/images/heroSection/Cat.svg";
+import iconDog from "../../assets/images/heroSection/Dog.svg";
+import iconPaw from "../../assets/images/heroSection/Foot.svg";
 import HeroCard from "../heroCard/HeroCard";
 import "../../App.css";
 export default function HeroSection() {

@@ -1,8 +1,8 @@
 import { useState } from "react";
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/nav/Logo.png";
 import HeartIcon from "../../assets/images/nav/HeartIcon.svg";
 import ArrowUp from "../../assets/images/nav/Arrow.png";
-import Menu from "../../assets/images/nav/icon-menu.svg";
+import Menu from "../../assets/images/nav/IconMenu.svg";
 import DropDown from "../dropDown/DropDown";
 
 import { Link } from "react-router-dom";

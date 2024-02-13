@@ -1,18 +1,8 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { createPetFinderInstance } from "../../utilities/axios/fetchApi";
+import { createPetFinderInstance } from "../../utilities/axios/FetchApi";
+import { OrganizationData } from "../../constants/Types";
 
-interface OrganizationData {
-  name: string;
-  photos: {
-    small: string;
-    medium: string;
-    large: string;
-    full: string;
-  }[];
-  age: string;
-  id: number;
-  description?: string;
-}
+
 
 interface ApiState {
   organizationData: OrganizationData[] | null;

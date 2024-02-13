@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { createPetFinderInstance } from "../../utilities/axios/fetchApi";
+import { createPetFinderInstance } from "../../utilities/axios/FetchApi";
 
 export type CounterState = {
   pet: [] | null;

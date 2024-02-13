@@ -1,5 +1,5 @@
 import React from "react";
-import Arrow from '../../assets/images/learnArrow/icon-Right.svg';
+import Arrow from '../../assets/images/learnArrow/IconRight.svg';
 
 const Learn: React.FC = () => {
   return (

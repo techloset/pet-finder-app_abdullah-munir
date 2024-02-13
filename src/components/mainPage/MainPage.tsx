@@ -11,7 +11,7 @@ import Card from "../mainPgCard/MainPageCard";
 import Image1 from "../../assets/images/S3/P1.svg";
 import Image2 from "../../assets/images/S3/P2.svg";
 import Image3 from "../../assets/images/S3/P3.svg";
-import DefaultImg from "../../assets/images/Defalt/Defalt.svg";
+import DefaultImg from "../../assets/images/default/Default.svg";
 import { Link } from "react-router-dom";
 
 type Photos = {

@@ -10,12 +10,12 @@ import { Link } from "react-router-dom";
 
 
 
-import AlertImg from "../../assets/images/DetailPg/icon-alert.svg";
-import FaviorteHeart from "../../assets/images/DetailPg/favIcon.svg";
-import DefaultImg from "../../assets/images/Defalt/Defalt.svg";
-import ShalterIcon from "../../assets/images/DetailPg/Organization Home.svg";
-import LocationIcon from "../../assets/images/DetailPg/LocationIcon.svg";
-import PhoneIcon from "../../assets/images/DetailPg/PhoneIcon.svg";
+import AlertImg from "../../assets/images/detailPg/IconAlert.svg";
+import FaviconIcon from "../../assets/images/detailPg/FavIcon.svg";
+import DefaultImg from "../../assets/images/default/Default.svg";
+import ShelterIcon from "../../assets/images/detailPg/ShelterIcon.svg";
+import LocationIcon from "../../assets/images/detailPg/LocationIcon.svg";
+import PhoneIcon from "../../assets/images/detailPg/PhoneIcon.svg";
 import likeIcon from "../../assets/images/S2/likeIcon.svg";
 
 type Photos = {
@@ -163,7 +163,7 @@ const Detail: FC = () => {
                           SPONSOR
                         </button>
                         <button className="flex gap-1 md:gap-4 justify-center border-black border-t-[1px] border-l-[1px] pt-3 pb-6 px[50px] md:px-[59px] hover:shadow-2xl bg-purple-700 hover:bg-purple-950  rounded-br-xl">
-                          <img src={FaviorteHeart} alt="" />
+                          <img src={FaviconIcon} alt="" />
                           FAVORITE
                         </button>
                       </div>
@@ -172,7 +172,7 @@ const Detail: FC = () => {
 
                   <div className="max-w-[270px] md:max-w-[393px] border-2 col-span-full lg:col-start-7 lg:col-span-4 bg-white p-8 rounded-2xl shadow-lg md:mb-0 relative lg:bottom-20 lg:top-[-80px] top-8 sm:top-8 md:top-16 pb-0 mx-auto">
                     <img
-                      src={ShalterIcon}
+                      src={ShelterIcon}
                       alt=""
                       className="flex border  justify-center items-center relative bottom-20 size-[150px] rounded-full mx-auto"
                     />
