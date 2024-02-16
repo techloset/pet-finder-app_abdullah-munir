@@ -26,7 +26,6 @@ export const fetchOrganizationData = createAsyncThunk(
         `/animals?organization=${organization_id}`
       );
       const organizationData = response.data.animals;
-      console.log("🚀 ~ organizationData:", organizationData);
       return organizationData;
     } catch (error) {
       throw new Error("Failed to fetch organization data");
