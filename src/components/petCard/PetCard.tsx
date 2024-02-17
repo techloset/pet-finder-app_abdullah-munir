@@ -3,7 +3,7 @@ import { FC } from "react";
 
 interface PropsTypes {
   petCount?: string;
-  avalibality?: string;
+  availability?: string;
 }
 
 const PetCard: FC<PropsTypes> = (props) => {
@@ -23,7 +23,7 @@ const PetCard: FC<PropsTypes> = (props) => {
             <div className="w-[149.14px] h-[36.59px] text-center text-white text-sm font-normal font-['Arial'] leading-tight">
               {props.petCount}
               <br />
-              {props.avalibality}
+              {props.availability}
             </div>
           </div>
         </div>

@@ -17,7 +17,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       <Learn />
       <Navbar />
       <App />
-      <Footer/>
+      <Footer />
     </BrowserRouter>
   </React.StrictMode>
   </Provider>

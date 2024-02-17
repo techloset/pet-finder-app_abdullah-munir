@@ -33,7 +33,6 @@ export const fetchOrganizationData = createAsyncThunk(
   }
 );
 
-// Slice for API state management
 const organizationSlice = createSlice({
   name: "api",
   initialState,

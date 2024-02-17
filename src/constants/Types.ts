@@ -1,3 +1,10 @@
+type Photos = {
+  small: string;
+  medium: string;
+  large: string;
+  full: string;
+};
+
 export interface OrganizationData {
     name: string;
     photos: {
@@ -53,3 +60,20 @@ export interface OrganizationData {
     organization_id: string;
     url: string;
   }
+
+  export interface response {
+    name: string;
+    photos: Photos[] | [];
+    age: string;
+    id: number;
+  }
+
+  
+  export interface resp {
+    name: string;
+    photos: Photos[] | [];
+    age: string;
+    id: number;
+    description?:string;
+  }
+  

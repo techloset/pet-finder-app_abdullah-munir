@@ -1,4 +1,12 @@
-export const footerLinks = [
+import Facebook from "../assets/images/footer/Facebook.png";
+import Twitter from "../assets/images/footer/Twitter.png";
+import Instagram from "../assets/images/footer/Instagram.png";
+import Youtube from "../assets/images/footer/Youtube.svg";
+import Pinterest from "../assets/images/footer/Pinterest.svg";
+
+
+
+export const FooterLinksList = [
   {
     title: "RESOURCES",
     links: [
@@ -46,3 +54,5 @@ export const footerLinks = [
     ],
   },
 ];
+
+export const FooterImg = [Facebook,Twitter,Instagram,Youtube,Pinterest]

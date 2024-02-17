@@ -20,7 +20,7 @@ export default function Navbar() {
     setIsNavOpen(!isNavOpen);
   };
   const toggleArrow = () => {
-    setIsArrowUp(!isArrowUp);
+    setIsArrowUp((prevState) => !prevState);
   };
 
   return (
@@ -41,8 +41,7 @@ export default function Navbar() {
                   id="dropdownHoverButton"
                   data-dropdown-toggle="dropdownHover"
                   data-dropdown-trigger="hover"
-                  className="text-customPurple rounded-lg text-constPurple font-bold text-sm px-2 py-2.5 md:ms-2 mr-1 hidden md:inline-flex items-center
-                  "
+                  className="text-customPurple rounded-lg text-constPurple  font-bold text-sm px-2 py-2.5 md:ms-2 mr-1 hidden md:inline-flex items-center"
                   type="button"
                   onClick={() => {
                     showNavbar();
@@ -50,40 +49,34 @@ export default function Navbar() {
                   }}
                 >
                   All ABOUT PETS
-                  <div className="w-3.5 h-[9px] relative flex-col justify-start items-start hidden md:inline-flex">
+                  <div className="w-3.5 h-[9px] relative flex-col justify-start items-start hidden md:inline-flex m-1">
                     <img
                       src={ArrowUp}
                       alt=""
-                      className={`text-xl ${
-                        isArrowUp ? "-rotate-180" : "rotate-180"
-                      }`}
+                      className={`text-xl ${isArrowUp ? "rotate-180 ease-in-out duration-[340ms]" : "ease-in-out duration-[340ms]"}`}
                     />
                   </div>
                 </button>
               </li>
               <li className="items-center inline-flex  md:hidden">
-                <button
-                  id="dropdownHoverButton2"
+              <button
+                  id="dropdownHoverButton"
                   data-dropdown-toggle="dropdownHover"
                   data-dropdown-trigger="hover"
-                  className="text-customPurple text-sm uppercase rounded-lg text-md px-2 py-2.5 inline-flex items-center
-                    "
+                  className="text-customPurple rounded-lg text-constPurple  font-bold text-sm px-2 py-2.5 md:ms-2 mr-1 md:hidden inline-flex items-center"
                   type="button"
-                  onClick={showNavbar}
+                  onClick={() => {
+                    showNavbar();
+                    toggleArrow();
+                  }}
                 >
-                  <div className="w-[79.72px] h-[9px] text-customPurple text-sm font-normal font-['Arial'] uppercase">
-                    Find a Pet
-                  </div>
-                  <div className="w-3.5 h-[8.99px] relative flex-col justify-start items-start inline-flex">
-                    <div className="w-3.5 h-[8.99px] relative flex-col justify-start items-start hidden md:inline-flex">
-                      <img
-                        src={ArrowUp}
-                        alt=""
-                        className={`text-xl ${
-                          isArrowUp ? "-rotate-180" : "rotate-180"
-                        }`}
-                      />
-                    </div>
+                  Find a pet
+                  <div className="w-3.5 h-[9px] relative flex-col justify-start items-start md:hidden inline-flex m-1">
+                    <img
+                      src={ArrowUp}
+                      alt=""
+                      className={`text-xl ${isArrowUp ? "rotate-180 ease-in-out duration-[340ms]" : "ease-in-out duration-[340ms]"}`}
+                    />
                   </div>
                 </button>
               </li>

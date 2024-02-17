@@ -17,21 +17,8 @@ import ShelterIcon from "../../assets/images/detailPg/ShelterIcon.svg";
 import LocationIcon from "../../assets/images/detailPg/LocationIcon.svg";
 import PhoneIcon from "../../assets/images/detailPg/PhoneIcon.svg";
 import likeIcon from "../../assets/images/S2/likeIcon.svg";
+import { resp } from "../../constants/Types";
 
-type Photos = {
-  small: string;
-  medium: string;
-  large: string;
-  full: string;
-};
-
-interface resp {
-  name: string;
-  photos: Photos[] | [];
-  age: string;
-  id: number;
-  description?:string;
-}
 
 const Detail: FC = () => {
   const [loading, setLoading] = useState(true);

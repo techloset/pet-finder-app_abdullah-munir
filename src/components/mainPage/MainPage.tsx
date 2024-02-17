@@ -13,20 +13,8 @@ import Image2 from "../../assets/images/S3/P2.svg";
 import Image3 from "../../assets/images/S3/P3.svg";
 import DefaultImg from "../../assets/images/default/Default.svg";
 import { Link } from "react-router-dom";
+import { response } from "../../constants/Types";
 
-type Photos = {
-  small: string;
-  medium: string;
-  large: string;
-  full: string;
-};
-
-interface response {
-  name: string;
-  photos: Photos[] | [];
-  age: string;
-  id: number;
-}
 
 const MainPage = () => {
   const dispatch = useAppDispatch();
@@ -83,7 +71,7 @@ const MainPage = () => {
         })}
         <PetCard
           petCount="10137 more pets"
-          avalibality="available on Petfinder"
+          availability="available on Petfinder"
         />
       </div>
       <div className="flex flex-wrap justify-center text-center ">
@@ -149,7 +137,7 @@ const MainPage = () => {
 
         <PetCard
           petCount="10137 more pets"
-          avalibality="available on Petfinder"
+          availability="available on Petfinder"
         />
       </div>
       <BlogPet />
