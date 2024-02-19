@@ -1,19 +1,4 @@
-
 .backGroundImg {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(209, 181, 247, 0.178),
-      rgba(8, 8, 8, 0.747)
-    ),
+  background-image:
     url("./assets/images/heroSection/HeroBg.png");
-    background-size: cover;
-}
-
-
-@font-face {
-  font-family: myFont;
-  src: url(./assets/font/G_ari_bd.TTF);
-}
-.fontPet {
-  font-family: myFont;
 }

@@ -20,9 +20,9 @@ const Footer = () => {
             <img src={Logo} alt="" />
           </div>
 
-          <div className="flex mt-[20px] flex-wrap-reverse items-end">
-            <div className="block md:flex flex-wrap mx-auto">
-              <FooterLinks />
+          <div className="flex w-full mt-[20px] flex-wrap-reverse items-end">
+            <div className="block md:flex flex-wrap mx-auto w-full sm:w-[70%]">
+              <FooterLinks/>
             </div>
             <FooterSignUp />
           </div>

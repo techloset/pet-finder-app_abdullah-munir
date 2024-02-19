@@ -8,7 +8,7 @@ import "../../App.css";
 export default function HeroSection() {
   return (
     <>
-      <div className="h-[410px] shadow bg-center backGroundImg">
+      <div className="h-[410px] shadow bg-center bg-cover backGroundImg">
         <form className="flex pt-5 justify-center">
           <div className="w-full max-w-[808px]">
             <div className=" relative h-[60px] grid grid-cols-7 sm:mb-[90px] rounded-lg border-2 bg-white">

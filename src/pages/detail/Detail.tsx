@@ -3,12 +3,14 @@ import { useParams } from "react-router-dom";
 import { getPetDetails } from "../../redux/slice/detailSlice";
 import { fetchOrganizationData } from "../../redux/slice/organizationSlice";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks/hooks";
-import Button from "../../components/detailButton/DetailButton";
 import PetCard from "../../components/petCard/PetCard";
 import OrgCard from "../../components/detailOrgCard/DetailOrgCard";
 import { Link } from "react-router-dom";
-
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
 
 import AlertImg from "../../assets/images/detailPg/IconAlert.svg";
 import FaviconIcon from "../../assets/images/detailPg/FavIcon.svg";
@@ -18,10 +20,11 @@ import LocationIcon from "../../assets/images/detailPg/LocationIcon.svg";
 import PhoneIcon from "../../assets/images/detailPg/PhoneIcon.svg";
 import likeIcon from "../../assets/images/S2/likeIcon.svg";
 import { resp } from "../../constants/Types";
-
+import DetailSponsorCard from "../../components/detailSponsorCard/DetailSponsorCard";
 
 const Detail: FC = () => {
   const [loading, setLoading] = useState(true);
+  const [orgLoading, setOrgLoading] = useState(true);
   const { id } = useParams<{ id: string }>();
   const dispatch = useAppDispatch();
   const petDetail = useAppSelector((state) => state.petData.petDetail);
@@ -34,12 +37,14 @@ const Detail: FC = () => {
       try {
         await dispatch(getPetDetails(`${id}`)).finally(() => setLoading(false));
         if (petDetail) {
-          await dispatch(fetchOrganizationData(`${organization_id}`));
+          await dispatch(fetchOrganizationData(`${organization_id}`)).finally(
+            () => setOrgLoading(false)
+          );
         }
       } catch (error) {
         console.log("Error fetching Animal Data:", error);
       } finally {
-        setLoading(false);
+        setLoading(false), setOrgLoading(false);
       }
     };
     fetchData();
@@ -56,8 +61,8 @@ const Detail: FC = () => {
           {petDetail && (
             <>
               <div className=" ">
-                <div className="h-[880px]">
-                  <div className="h-2/6 sm:h-4/6  flex justify-center bg-black">
+                <div className="h-[500px] sm:h-[880px]">
+                  <div className="h-[40%] sm:h-4/6  flex justify-center bg-black">
                     <img
                       src={petDetail.photos[0]?.full || DefaultImg}
                       alt="petDetail?.name"
@@ -68,7 +73,7 @@ const Detail: FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 md:mx-auto lg:grid-cols-10 gap-8 w-full max-w-5xl mx-auto px-4 md:px-0 relative bottom-72  sm:bottom-56 md:bottom-68 lg:bottom-72 justify-evenly">
                   <div className="col-span-full lg:col-span-6 bg-white p-8 rounded-xl shadow-lg mb-8  md:mb-0 ">
                     <div className="">
-                      <div className="flex text-4xl font-400 font-normal px-7 py-6 justify-center">
+                      <div className="flex text-lg sm:text-4xl font-normal px-7 py-6 justify-center">
                         {petDetail?.name}
                       </div>
                       <div className="flex text-base px-7 py-2 justify-center sm:justify-center sm:inline-flex">
@@ -108,7 +113,9 @@ const Detail: FC = () => {
                     </div>
                     <div className="mt-10">
                       <div className="text-3xl px-7 py-5">About</div>
-                      <div className="px-7">{petDetail.description.slice(0,100)}</div>
+                      <div className="px-7">
+                        {petDetail.description.slice(0, 100)}
+                      </div>
                     </div>
                     <hr className="w-[90%] mx-auto mt-8 hidden sm:hidden  md:flex" />
                     <div className="mt-8">
@@ -128,34 +135,7 @@ const Detail: FC = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="max-w-[270px] md:max-w-[393px] md:h-80 pb-0 col-span-full lg:col-span-4 text-white p-8 rounded-xl shadow-lg mb-8 md:mb-0 bg-purple-700 mx-auto">
-                    <div className="">
-                      <div className="text-xl font-normal mt-6 text-center">
-                        Considering {petDetail.name} for adoption?
-                      </div>
-                      <div className="rounded-3xl  text-center mt-10 bg-white border-2 text-purple-700 hover:bg-purple-950  hover:text-white hover:border-2 hover:bordre-white hover:shadow-2xl">
-                        <Button
-                          txt="START YOUR INQUIRY"
-                          cls="h-[45px] text-sm font-normal"
-                        />
-                      </div>
-                      <div className="flex items-center justify-center rounded-3xl h-[45PX] text-center mt-10 border-2 border-white hover:bg-purple-950   hover:shadow-2xl">
-                        <Button
-                          txt="READ FAQs"
-                          cls="h-[45px] text-sm font-normal"
-                        />
-                      </div>
-                      <div className="md:h-1 flex justify-around items-center mt-12 bg-purple-700">
-                        <button className="text-center border-t-[1px] border-black pt-3 pb-6 px[50px] md:px-[59px] hover:shadow-2xl bg-purple-700 hover:bg-purple-950 rounded-bl-xl">
-                          SPONSOR
-                        </button>
-                        <button className="flex gap-1 md:gap-4 justify-center border-black border-t-[1px] border-l-[1px] pt-3 pb-6 px[50px] md:px-[59px] hover:shadow-2xl bg-purple-700 hover:bg-purple-950  rounded-br-xl">
-                          <img src={FaviconIcon} alt="" />
-                          FAVORITE
-                        </button>
-                      </div>
-                    </div>
-                  </div>
+                  <DetailSponsorCard name={petDetail.name} src={FaviconIcon} />
 
                   <div className="max-w-[270px] md:max-w-[393px] border-2 col-span-full lg:col-start-7 lg:col-span-4 bg-white p-8 rounded-2xl shadow-lg md:mb-0 relative lg:bottom-20 lg:top-[-80px] top-8 sm:top-8 md:top-16 pb-0 mx-auto">
                     <img
@@ -257,61 +237,101 @@ const Detail: FC = () => {
                 </div>
                 <p className="underline">View Pet Adoption Stories</p>
                 <div className="flex flex-wrap justify-center text-center">
-                  {orgData?.slice(2, 5).map((pet: resp, i: number) => {
-                    return (
-                      <OrgCard
-                        key={i}
-                        id={pet.id}
-                        src={pet?.photos?.[0]?.full}
-                        name={pet.name.slice(0, 20)}
-                        disc={pet.description}
-                      />
-                    );
-                  })}
+                  {orgLoading ? (
+                    <div className="flex justify-center items-center h-[500px]">
+                      <div className="animate-spin rounded-full h-20 w-20 border-t-4 border-purple-700 border-solid"></div>
+                    </div>
+                  ) : (
+                    <>
+                      {orgData?.slice(2, 5).map((pet: resp, i: number) => {
+                        return (
+                          <OrgCard
+                            key={i}
+                            id={pet.id}
+                            src={pet?.photos?.[0]?.full}
+                            name={pet.name.slice(0, 20)}
+                            disc={pet.description}
+                          />
+                        );
+                      })}
+                    </>
+                  )}
                 </div>
               </div>
             </>
           )}
           <div className="mt-16">
             <h1 className="text-2xl md:text-4xl text-center text-purple-700">
-              More dogs from {petDetail&&(<>{petDetail.organization_id}</>)} Animals In Need
+              More dogs from {petDetail && <>{petDetail.organization_id}</>}{" "}
+              Animals In Need
             </h1>
-            <div className="flex flex-wrap justify-center text-center">
-              {orgData?.slice(6, 10)?.map((pet: resp, i: number) => {
-                return (
-                  <Link to={`/detail/${pet.id}`}>
-                    <div
-                      key={i}
-                      className="w-auto mx-2 h-[301.2px] mb-4 cursor-pointer "
-                    >
-                      <div className="w-[231.2px] h-[301.2px] mt-6 bg-opacity-0 rounded-lg shadow hover:shadow-lg">
-                        <div className=" bg-zinc-200 rounded-tl-lg rounded-tr-lg">
-                          <img
-                            className="w-[231.2px] rounded-tl-lg rounded-tr-lg object-cover h-[231.20px]"
-                            src={pet?.photos?.[0]?.full || DefaultImg}
-                            alt={pet.age}
-                          />
-                        </div>
-                        <div className=" top-[-10px] h-[70px] ">
-                          <div className="flex rounded-tl-3xl rounded-tr-3xl relative h-[9px] bg-white top-[-8px]"></div>
-                          <div className="h-8 ">
-                            <div className=" text-violet-800 text-xl inline-flex">
-                              {pet.name.slice(0, 20)}
+            <div className="flex flex-nowrap justify-center items-center">
+              <Swiper
+                slidesPerView={4}
+                spaceBetween={30}
+                freeMode={true}
+                pagination={{
+                  clickable: true,
+                }}
+                breakpoints={{
+                  0:{
+                    slidesPerView: 1,
+                    
+                  },
+                  500: {
+                    slidesPerView: 2,
+                  },
+                  768: {
+                    slidesPerView: 2,
+                  },
+                  1024: {
+                    slidesPerView: 3,
+                  },
+                  1280: {
+                    slidesPerView: 4,
+                  },
+                }}
+                modules={[FreeMode, Pagination]}
+                className="mySwiper flex items-center"
+              >
+                {orgData?.map((pet: resp, i: number) => {
+                  return (
+                    <SwiperSlide key={pet.id}>
+                      <Link to={`/detail/${pet.id}`}>
+                        <div
+                          key={i}
+                          className="w-auto mx-2 h-[301.2px] mb-4 cursor-pointer "
+                        >
+                          <div className="w-[231.2px] h-[301.2px] mt-6 bg-opacity-0 rounded-lg shadow hover:shadow-lg">
+                            <div className=" bg-zinc-200 rounded-tl-lg rounded-tr-lg">
+                              <img
+                                className="w-[231.2px] rounded-tl-lg rounded-tr-lg object-cover h-[231.20px]"
+                                src={pet?.photos?.[0]?.full || DefaultImg}
+                                alt={pet.age}
+                              />
+                            </div>
+                            <div className=" top-[-10px] h-[70px]  bg-white  rounded-b-lg">
+                              <div className="flex rounded-tl-3xl rounded-tr-3xl relative h-[9px]top-[-8px]"></div>
+                              <div className="h-8">
+                                <div className=" text-violet-800 text-xl inline-flex mx-[70px]">
+                                  {pet.name.slice(0, 10)}
+                                </div>
+                              </div>
+                            </div>
+
+                            <div className="w-[45px] h-[45px] p-2.5 top-[-293px] left-[160px] relative rounded-[22.50px] justify-center items-center inline-flex">
+                              <div className="w-[25px] h-[25px] relative flex-col justify-start items-start flex">
+                                <img src={likeIcon} alt="" />
+                              </div>
                             </div>
                           </div>
                         </div>
-
-                        <div className="w-[45px] h-[45px] p-2.5 top-[-293px] left-[85px] relative bg-white bg-opacity-75 rounded-[22.50px] justify-center items-center inline-flex">
-                          <div className="w-[25px] h-[25px] relative flex-col justify-start items-start flex">
-                            <img src={likeIcon} alt="" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </Link>
-                );
-              })}
-              <PetCard />
+                      </Link>
+                    </SwiperSlide>
+                  );
+                })}
+                <PetCard />
+              </Swiper>
             </div>
           </div>
         </>
