@@ -1,5 +1,3 @@
-
-
 const FooterSignUp = () => {
   return (
     <div className="w-full sm:w-[330px] h-[223px] sm:h-[170px] bg-purple-100 rounded-[10px] flex flex-col p-[20px] mx-auto">

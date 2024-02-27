@@ -16,13 +16,13 @@ const Footer = () => {
       </div>
       <footer className="bg-violet-800">
         <div className="flex flex-col mx-[15px] px-[50px] py-[40px]">
-          <div className="">
+          <div className="mx-auto md:mx-[6rem] xl:mx-[4rem]">
             <img src={Logo} alt="" />
           </div>
 
           <div className="flex w-full mt-[20px] flex-wrap-reverse items-end">
             <div className="block md:flex flex-wrap mx-auto w-full sm:w-[70%]">
-              <FooterLinks/>
+              <FooterLinks />
             </div>
             <FooterSignUp />
           </div>

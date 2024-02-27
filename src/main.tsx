@@ -5,21 +5,21 @@ import "./index.css";
 import Learn from "./components/learn/Learn.tsx";
 import Navbar from "./components/navbar/Navbar.tsx";
 import reportWebVitals from "./reportWebVitals";
-import { Provider } from 'react-redux'
+import { Provider } from "react-redux";
 import Footer from "./components/footer/Footer.tsx";
 import { BrowserRouter } from "react-router-dom";
-import { store } from './redux/store/store.tsx';
+import { store } from "./redux/store/store.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <Provider store= {store}>
-  <React.StrictMode>
-    <BrowserRouter>
-      <Learn />
-      <Navbar />
-      <App />
-      <Footer />
-    </BrowserRouter>
-  </React.StrictMode>
+  <Provider store={store}>
+    <React.StrictMode>
+      <BrowserRouter>
+        <Learn />
+        <Navbar />
+        <App />
+        <Footer />
+      </BrowserRouter>
+    </React.StrictMode>
   </Provider>
 );
 

@@ -4,8 +4,6 @@ import Instagram from "../assets/images/footer/Instagram.png";
 import Youtube from "../assets/images/footer/Youtube.svg";
 import Pinterest from "../assets/images/footer/Pinterest.svg";
 
-
-
 export const FooterLinksList = [
   {
     title: "RESOURCES",
@@ -55,4 +53,4 @@ export const FooterLinksList = [
   },
 ];
 
-export const FooterImg = [Facebook,Twitter,Instagram,Youtube,Pinterest]
+export const FooterImg = [Facebook, Twitter, Instagram, Youtube, Pinterest];

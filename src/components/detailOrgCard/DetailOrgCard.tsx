@@ -28,7 +28,9 @@ const OrgCard: FC<cardTypes> = (props) => {
               </div>
 
               <div className="h-[160px] mt-3">
-                <div className="text-black mx-7">{props.disc?.slice(0,88)}...</div>
+                <div className="text-black mx-7">
+                  {props.disc?.slice(0, 88)}...
+                </div>
               </div>
               <div className="h-[30px]">
                 <button className="text-black w-full border-t-[0.5px] border-[#dcdbdd] bg-white pt-2 pb-3 hover:bg-black hover:text-white rounded-b-xl">

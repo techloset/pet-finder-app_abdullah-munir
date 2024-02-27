@@ -2,9 +2,6 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { createPetFinderInstance } from "../../utilities/axios/FetchApi";
 import { PetDetail } from "../../constants/Types";
 
-
-
-
 export interface DetailState {
   petDetail: PetDetail | null;
   loading: boolean;

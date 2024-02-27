@@ -3,7 +3,7 @@ interface PropsType {
   src: string;
   text: string;
   title: string;
-  className?:string;
+  className?: string;
 }
 
 const heroCard: FC<PropsType> = (props) => {

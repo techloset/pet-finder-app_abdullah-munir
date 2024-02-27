@@ -53,13 +53,17 @@ export default function Navbar() {
                     <img
                       src={ArrowUp}
                       alt=""
-                      className={`text-xl ${isArrowUp ? "rotate-180 ease-in-out duration-[340ms]" : "ease-in-out duration-[340ms]"}`}
+                      className={`text-xl ${
+                        isArrowUp
+                          ? "rotate-180 ease-in-out duration-[340ms]"
+                          : "ease-in-out duration-[340ms]"
+                      }`}
                     />
                   </div>
                 </button>
               </li>
               <li className="items-center inline-flex  md:hidden">
-              <button
+                <button
                   id="dropdownHoverButton"
                   data-dropdown-toggle="dropdownHover"
                   data-dropdown-trigger="hover"
@@ -75,7 +79,11 @@ export default function Navbar() {
                     <img
                       src={ArrowUp}
                       alt=""
-                      className={`text-xl ${isArrowUp ? "rotate-180 ease-in-out duration-[340ms]" : "ease-in-out duration-[340ms]"}`}
+                      className={`text-xl ${
+                        isArrowUp
+                          ? "rotate-180 ease-in-out duration-[340ms]"
+                          : "ease-in-out duration-[340ms]"
+                      }`}
                     />
                   </div>
                 </button>

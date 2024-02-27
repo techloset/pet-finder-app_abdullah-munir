@@ -274,9 +274,8 @@ const Detail: FC = () => {
                   clickable: true,
                 }}
                 breakpoints={{
-                  0:{
+                  0: {
                     slidesPerView: 1,
-                    
                   },
                   500: {
                     slidesPerView: 2,

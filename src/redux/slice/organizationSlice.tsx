@@ -2,8 +2,6 @@ import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { createPetFinderInstance } from "../../utilities/axios/FetchApi";
 import { OrganizationData } from "../../constants/Types";
 
-
-
 interface ApiState {
   organizationData: OrganizationData[] | null;
   status: "idle" | "loading" | "succeeded" | "failed";

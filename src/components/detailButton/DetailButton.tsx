@@ -1,11 +1,11 @@
-import { FC } from 'react';
+import { FC } from "react";
 
 interface buttonTypes {
-    txt:string;
-    cls?:string;
+  txt: string;
+  cls?: string;
 }
 
-const DetailButton:FC<buttonTypes> = (props) => {
+const DetailButton: FC<buttonTypes> = (props) => {
   return (
     <button type="button" className={props.cls}>
       {props.txt}

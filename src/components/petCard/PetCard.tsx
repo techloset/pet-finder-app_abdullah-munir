@@ -1,4 +1,4 @@
-import iconStrokedPaw from "../../assets/images/S2/Foot.svg";
+import iconStrokedPaw from "../../assets/images/s4/P5.svg";
 import { FC } from "react";
 
 interface PropsTypes {
@@ -36,7 +36,7 @@ const PetCard: FC<PropsTypes> = (props) => {
           </div>
         </button>
       </div>
-      </>
+    </>
   );
 };
 

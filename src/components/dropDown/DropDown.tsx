@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 
-
 const dropDown = () => {
   return (
     <>
@@ -11,11 +10,11 @@ const dropDown = () => {
           </Link>
 
           <Link className="p-2 mx-4 " to={"/"}>
-           <h1>Dogs Pupies</h1>
+            <h1>Dogs Pupies</h1>
           </Link>
 
           <Link className="p-2 mx-4 " to={"/"}>
-           <h1>Cats Kittens</h1>
+            <h1>Cats Kittens</h1>
           </Link>
 
           <Link className="p-2 mx-4 " to={"/"}>

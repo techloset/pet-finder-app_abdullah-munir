@@ -1,14 +1,14 @@
 import { FC } from "react";
-import Button from "../button/Button"
+import Button from "../button/Button";
 
-interface PropsType{
-    src:string;
-    title:string;
-    alt?: string;
-    disc:string;
+interface PropsType {
+  src: string;
+  title: string;
+  alt?: string;
+  disc: string;
 }
 
-const MainPageCard:FC<PropsType> = (props) => {
+const MainPageCard: FC<PropsType> = (props) => {
   return (
     <div className="text-center mx-[20.3px] my-2 md:my-0">
       <img

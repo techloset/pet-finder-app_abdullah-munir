@@ -26,10 +26,6 @@ export async function fetchToken(clientId: string, clientSecret: string) {
   }
 }
 
-
-
-
-
 const CLIENT_ID = "x6ty0NnOjoeXPkrGRLoMTXffnuhSLcsinNci8DV9bl4IlF4M9b";
 const CLIENT_SECRET = "mBD6eu0JvZ7bCYfCnsQRtBZ9hwobQEM3Q2UG7oie";
 
@@ -37,23 +33,22 @@ fetchToken(CLIENT_ID, CLIENT_SECRET);
 
 setInterval(async () => {
   console.log("Refreshing access token...");
-   accessToken = await fetchToken(CLIENT_ID, CLIENT_SECRET);
+  accessToken = await fetchToken(CLIENT_ID, CLIENT_SECRET);
 }, 60 * 60 * 1000); // Refresh every hour
 
 export async function createPetFinderInstance() {
-	try {
-		if (!accessToken) await fetchToken(CLIENT_ID, CLIENT_SECRET);
-	} catch (error) {
-		throw new Error('Error getting access token')
-	}
-	return axios.create({
-	baseURL: `https://api.petfinder.com/v2`,
-	timeout: 10000,
-	headers: {
-		Accept: "application/json",
-		Authorization: `Bearer ${accessToken}`,
-		"Content-Type": "application/json",
-	},
-	});
+  try {
+    if (!accessToken) await fetchToken(CLIENT_ID, CLIENT_SECRET);
+  } catch (error) {
+    throw new Error("Error getting access token");
   }
-
+  return axios.create({
+    baseURL: `https://api.petfinder.com/v2`,
+    timeout: 10000,
+    headers: {
+      Accept: "application/json",
+      Authorization: `Bearer ${accessToken}`,
+      "Content-Type": "application/json",
+    },
+  });
+}
