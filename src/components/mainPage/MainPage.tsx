@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { getPetData } from "../../redux/slice/userSlice";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks/hooks";
 import LikeIcon from "../../assets/images/s2/LikeIcon.svg";
-import arrow from "../../assets/images/S2/Arrow.svg";
+import arrow from "../../assets/images/s2/Arrow.svg";
 import BlogPet from "../petBlog/PetBlog";
 import PetCard from "../petCard/PetCard";
 import Card from "../mainPgCard/MainPageCard";
