@@ -1,4 +1,4 @@
-import iconStrokedPaw from "../../assets/images/S2/p5.svg";
+import iconStrokedPaw from "../../assets/images/S2/Foot.svg";
 import { FC } from "react";
 
 interface PropsTypes {

@@ -1,9 +1,9 @@
 import PetBlogCard from "../petBlogCard/PetBlogCard";
 
-import cuteDog from "../../assets/images/S5/Dog.png";
-import cuteCat from "../../assets/images/S5/Cat.svg";
-import puppy from "../../assets/images/S5/Puppy.svg";
-import kitten from "../../assets/images/S5/Kitten.svg";
+import cuteDog from "../../assets/images/s5/Dog.png";
+import cuteCat from "../../assets/images/s5/Cat.svg";
+import puppy from "../../assets/images/s5/Puppy.svg";
+import kitten from "../../assets/images/s5/Kitten.svg";
 export default function BlogPet() {
   return (
     <>

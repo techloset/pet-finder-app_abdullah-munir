@@ -18,7 +18,7 @@ import DefaultImg from "../../assets/images/default/Default.svg";
 import ShelterIcon from "../../assets/images/detailPg/ShelterIcon.svg";
 import LocationIcon from "../../assets/images/detailPg/LocationIcon.svg";
 import PhoneIcon from "../../assets/images/detailPg/PhoneIcon.svg";
-import likeIcon from "../../assets/images/S2/likeIcon.svg";
+import LikeIcon from "../../assets/images/s2/LikeIcon.svg";
 import { resp } from "../../constants/Types";
 import DetailSponsorCard from "../../components/detailSponsorCard/DetailSponsorCard";
 
@@ -321,7 +321,7 @@ const Detail: FC = () => {
 
                             <div className="w-[45px] h-[45px] p-2.5 top-[-293px] left-[160px] relative rounded-[22.50px] justify-center items-center inline-flex">
                               <div className="w-[25px] h-[25px] relative flex-col justify-start items-start flex">
-                                <img src={likeIcon} alt="" />
+                                <img src={LikeIcon} alt="" />
                               </div>
                             </div>
                           </div>

@@ -2,15 +2,15 @@ import "../../App.css";
 import { useEffect, useState } from "react";
 import { getPetData } from "../../redux/slice/userSlice";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks/hooks";
-import likeIcon from "../../assets/images/S2/likeIcon.svg";
+import LikeIcon from "../../assets/images/s2/LikeIcon.svg";
 import arrow from "../../assets/images/S2/Arrow.svg";
 import BlogPet from "../petBlog/PetBlog";
 import PetCard from "../petCard/PetCard";
 import Card from "../mainPgCard/MainPageCard";
 
-import Image1 from "../../assets/images/S3/P1.svg";
-import Image2 from "../../assets/images/S3/P2.svg";
-import Image3 from "../../assets/images/S3/P3.svg";
+import Image1 from "../../assets/images/s3/P1.svg";
+import Image2 from "../../assets/images/s3/P2.svg";
+import Image3 from "../../assets/images/s3/P3.svg";
 import DefaultImg from "../../assets/images/default/Default.svg";
 import { Link } from "react-router-dom";
 import { response } from "../../constants/Types";
@@ -68,7 +68,7 @@ const MainPage = () => {
 
                       <div className="w-[45px] h-[45px] p-2.5 top-[-293px] left-[85px] relative rounded-[22.50px] justify-center items-center inline-flex">
                         <div className="w-[45px] h-[45px] relative flex-col justify-start items-start flex">
-                          <img src={likeIcon} alt="" />
+                          <img src={LikeIcon} alt="" />
                         </div>
                       </div>
                     </div>
@@ -133,7 +133,7 @@ const MainPage = () => {
 
                       <div className="w-[45px] h-[45px] p-2.5 top-[-293px] left-[85px] relative rounded-[22.50px] justify-center items-center inline-flex">
                         <div className="w-[45px] h-[45px] relative flex-col justify-start items-start flex">
-                          <img src={likeIcon} alt=""/>
+                          <img src={LikeIcon} alt=""/>
                         </div>
                       </div>
                     </div>
