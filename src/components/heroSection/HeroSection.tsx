@@ -4,11 +4,10 @@ import iconCat from "../../assets/images/heroSection/Cat.svg";
 import iconDog from "../../assets/images/heroSection/Dog.svg";
 import iconPaw from "../../assets/images/heroSection/Foot.svg";
 import HeroCard from "../heroCard/HeroCard";
-import "../../App.css";
 export default function HeroSection() {
   return (
     <>
-      <div className="h-[410px] shadow bg-center bg-cover backGroundImg">
+      <div className="h-[410px] shadow bg-center bg-cover " style={{backgroundImage:`url("/src/assets/images/heroSection/HeroBg.png")`}}>
         <form className="flex pt-5 justify-center">
           <div className="w-full max-w-[808px]">
             <div className=" relative h-[60px] grid grid-cols-7 sm:mb-[90px] rounded-lg border-2 bg-white">

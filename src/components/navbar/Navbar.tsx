@@ -118,13 +118,13 @@ export default function Navbar() {
               <div className="flex flex-wrap ms-auto pe-2 lg:m-0">
                 <button
                   type="button"
-                  className="text-black font-serif font-bold rounded-lg text-sm px-4 py-2 text-center focus:ring-blue-800"
+                  className="text-black font-[arial] font-bold rounded-lg text-sm px-4 py-2 text-center focus:ring-blue-800"
                 >
                   Signup
                 </button>
                 <button
                   type="button"
-                  className="text-black font-serif font-bold rounded-lg text-sm px-4 py-2 text-center focus:ring-blue-800"
+                  className="text-black font-[arial] font-bold rounded-lg text-sm px-4 py-2 text-center focus:ring-blue-800"
                 >
                   Login
                 </button>
