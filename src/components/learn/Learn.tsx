@@ -13,7 +13,6 @@ const Learn: React.FC = () => {
             about how Purina and Petfinder are making a difference together.
           </span>
         </p>
-        {/* <RiArrowDropRightLine className="text-3xl ml-1" /> */}
         <img src={Arrow} alt="" className="w-6 h-6 ml" />
       </a>
     </div>
