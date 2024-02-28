@@ -182,7 +182,7 @@ const Detail: FC = () => {
                   </div>
                 </div>
               </div>
-              <div className="h-[350px]  justify-center text-white bg-constPurple  hidden md:hidden lg:flex">
+              <div className="h-[360px]  justify-center text-white bg-constPurple  hidden md:hidden lg:flex mb-7">
                 <div className="mx-[60px] my-auto">
                   <div className="flex mx-10 items-center gap-5  ">
                     <div className="size-[103px] flex items-center">
