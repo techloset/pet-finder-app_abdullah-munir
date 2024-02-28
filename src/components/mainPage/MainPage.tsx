@@ -60,7 +60,7 @@ const MainPage = () => {
                       <div className=" top-[-10px] h-[70px]  bg-white">
                         <div className="flex rounded-tl-3xl rounded-tr-3xl relative h-[9px] top-[-8px]"></div>
                         <div className="h-8 ">
-                          <div className=" text-violet-800 text-xl inline-flex">
+                          <div className=" text-constPurple text-xl inline-flex">
                             {pet.name.slice(0, 10)}
                           </div>
                         </div>
@@ -125,7 +125,7 @@ const MainPage = () => {
                       <div className=" top-[-10px] h-[70px]  bg-white  rounded-b-lg">
                         <div className="flex rounded-tl-3xl rounded-tr-3xl relative h-[9px]top-[-8px]"></div>
                         <div className="h-8 ">
-                          <div className=" text-violet-800 text-xl inline-flex">
+                          <div className=" text-constPurple text-xl inline-flex">
                             {pet.name.slice(0, 10)}
                           </div>
                         </div>

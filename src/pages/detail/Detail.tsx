@@ -182,7 +182,7 @@ const Detail: FC = () => {
                   </div>
                 </div>
               </div>
-              <div className="h-[350px]  justify-center text-white bg-purple-700  hidden md:hidden lg:flex">
+              <div className="h-[350px]  justify-center text-white bg-constPurple  hidden md:hidden lg:flex">
                 <div className="mx-[60px] my-auto">
                   <div className="flex mx-10 items-center gap-5  ">
                     <div className="size-[103px] flex items-center">
@@ -312,7 +312,7 @@ const Detail: FC = () => {
                             <div className=" top-[-10px] h-[70px]  bg-white  rounded-b-lg">
                               <div className="flex rounded-tl-3xl rounded-tr-3xl relative h-[9px]top-[-8px]"></div>
                               <div className="h-8">
-                                <div className=" text-violet-800 text-xl inline-flex mx-[70px]">
+                                <div className=" text-constPurple text-xl inline-flex mx-[70px]">
                                   {pet.name.slice(0, 10)}
                                 </div>
                               </div>

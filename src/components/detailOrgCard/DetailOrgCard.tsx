@@ -23,7 +23,7 @@ const OrgCard: FC<cardTypes> = (props) => {
           />
           <div className="h-[250px]  ">
             <div>
-              <div className="h-[20px] text-violet-800 text-xl">
+              <div className="h-[20px] text-[#6605b5] text-xl">
                 {props.name.slice(0, 10)}
               </div>
 

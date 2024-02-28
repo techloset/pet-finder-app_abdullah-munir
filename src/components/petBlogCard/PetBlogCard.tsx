@@ -33,7 +33,7 @@ const PetBlogCard: FC<PropType> = (props) => {
       </div>
       <Link
         to={"/"}
-        className="h-[18px] my-5 text-center text-violet-800 text-sm uppercase leading-tight"
+        className="h-[18px] my-5 text-center text-constPurple text-sm uppercase leading-tight"
       >
         Read More
       </Link>

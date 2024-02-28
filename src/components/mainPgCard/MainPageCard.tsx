@@ -16,7 +16,7 @@ const MainPageCard: FC<PropsType> = (props) => {
         src={props.src}
         alt="..."
       />
-      <div className=" h-[26px] mb-[31px] text-center text-violet-800 text-xl font-normal uppercase leading-loose">
+      <div className=" h-[26px] mb-[31px] text-center text-constPurple text-xl font-normal uppercase leading-loose">
         {props.title}
       </div>
       <div className="max-w-[371.39px] mb-[33px] h-[45px] text-center text-neutral-600 leading-[25px]">
