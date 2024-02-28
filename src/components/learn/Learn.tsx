@@ -4,7 +4,7 @@ import Arrow from "../../assets/images/learnArrow/IconRight.svg";
 const Learn: React.FC = () => {
   return (
     <div className="bg-slate-100 py-3">
-      <a href="/" className="flex items-center justify-center text-center">
+      <a href="/" className="flex items-center justify-end text-center">
         <p className="text-#4D4751 font-sans text-base font-normal leading-relaxed sm:text-lg ">
           <span className="text-blue-500 font-arial text-base leading-normal underline sm:text-lg ">
             Learn more
