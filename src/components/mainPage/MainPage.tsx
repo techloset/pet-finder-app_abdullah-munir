@@ -33,14 +33,15 @@ const MainPage = () => {
         </div>
       ) : (
         <>
-          <div className="grid grid-cols-12 text-purple-700 font-bold">
-            <div className="col-start-5 col-span-4">
-              <p className="text-xl">PETS AVAILABLE FOR ADOPTION NEARBY</p>
+          <div className="flex justify-center items-center text-purple-700 font-bold gap-4 mx-7 sm:mx-0">
+            <div>
+              <p className="text-xl">Pets Available for Adoption Nearby</p>
             </div>
             <div>
-              <img src={arrow} alt="ARROW" />
+              <img src={arrow} alt="ARROW" className="size-4"/>
             </div>
           </div>
+
           <div className="flex flex-wrap justify-center text-center">
             {data?.slice(12, 16)?.map((pet: response, i: number) => {
               return (
@@ -133,7 +134,7 @@ const MainPage = () => {
 
                       <div className="w-[45px] h-[45px] p-2.5 top-[-293px] left-[85px] relative rounded-[22.50px] justify-center items-center inline-flex">
                         <div className="w-[45px] h-[45px] relative flex-col justify-start items-start flex">
-                          <img src={LikeIcon} alt=""/>
+                          <img src={LikeIcon} alt="" />
                         </div>
                       </div>
                     </div>
