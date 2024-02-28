@@ -318,8 +318,8 @@ const Detail: FC = () => {
                               </div>
                             </div>
 
-                            <div className="w-[45px] h-[45px] p-2.5 top-[-293px] left-[160px] relative rounded-[22.50px] justify-center items-center inline-flex">
-                              <div className="w-[25px] h-[25px] relative flex-col justify-start items-start flex">
+                            <div className="size-14 p-2.5 top-[-293px] left-[160px] relative rounded-[22.50px] justify-center items-center inline-flex">
+                              <div className="relative flex-col justify-start items-start flex">
                                 <img src={LikeIcon} alt="" />
                               </div>
                             </div>

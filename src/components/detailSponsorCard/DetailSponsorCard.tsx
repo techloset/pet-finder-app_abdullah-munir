@@ -20,10 +20,10 @@ const DetailSponsorCard: FC<sponsorCardTypes> = (props) => {
           <Button txt="READ FAQs" cls="h-[45px] text-sm font-normal" />
         </div>
         <div className="md:h-1 flex justify-around items-center mt-12 bg-constPurple w-full border-t-black">
-          <button className="text-center border-t-[1px] border-black pt-3 pb-6 px-[31px] md:px-[53px] hover:shadow-2xl bg-constPurple hover:bg-customPrime rounded-bl-xl">
+          <button className="text-center border-t-[1px] border-black pt-3 pb-6 px-[31px] md:px-[54.5px] hover:shadow-2xl bg-constPurple hover:bg-customPrime rounded-bl-xl">
             SPONSOR
           </button>
-          <button className="flex gap-0 md:gap-4 border-t-[1px] border-black border-l-[1px] s pt-3 pb-6 px-[31px] md:px-[53px] hover:shadow-2xl bg-constPurple hover:bg-customPrime rounded-br-xl">
+          <button className="flex gap-0 md:gap-4 border-t-[1px] border-black border-l-[1px] s pt-3 pb-6 px-[31px] md:px-[54.5px] hover:shadow-2xl bg-constPurple hover:bg-customPrime rounded-br-xl">
             <img src={props.src} alt="" />
             FAVORITE
           </button>
