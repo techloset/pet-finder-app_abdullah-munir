@@ -7,7 +7,7 @@ import HeroCard from "../heroCard/HeroCard";
 export default function HeroSection() {
   return (
     <>
-      <div className="h-[410px] shadow bg-center bg-cover " style={{backgroundImage:`url("src/assets/images/heroSection/HeroBg.png")`}}>
+      <div className="h-[410px] shadow bg-center bg-cover BackgroungImg" >
         <form className="flex pt-5 justify-center">
           <div className="w-full max-w-[808px]">
             <div className=" relative h-[60px] grid grid-cols-7 sm:mb-[90px] rounded-lg border-2 bg-white">
