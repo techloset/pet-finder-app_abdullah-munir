@@ -38,28 +38,28 @@ const MainPage = () => {
               <p className="text-xl">Pets Available for Adoption Nearby</p>
             </div>
             <div>
-              <img src={arrow} alt="ARROW" className="size-4"/>
+              <img src={arrow} alt="ARROW" className="size-4" />
             </div>
           </div>
 
           <div className="flex flex-wrap justify-center text-center">
             {data?.slice(12, 16)?.map((pet: response, i: number) => {
               return (
-                <Link to={`/detail/${pet.id}`}>
-                  <div
-                    key={i}
-                    className="w-auto mx-2 h-[301.2px] mb-4 cursor-pointer "
-                  >
-                    <div className="w-[231.2px] h-[301.2px] mt-6 bg-opacity-0 rounded-lg shadow hover:shadow-lg">
-                      <div className=" bg-white rounded-tl-lg rounded-tr-lg">
+                <div
+                  key={i}
+                  className="w-auto mx-2 h-[301.2px] mb-4 cursor-pointer"
+                >
+                  <Link to={`/detail/${pet.id}`}>
+                    <div className="w-[231.2px] h-[301.2px] mt-6 bg-opacity-0shadow hover:shadow-lg shadow rounded-b-lg">
+                      <div className=" bg-zinc-200 rounded-tl-lg rounded-tr-lg">
                         <img
                           className="w-[231.2px] rounded-tl-lg rounded-tr-lg object-cover h-[231.20px]"
-                          src={pet?.photos?.[0]?.full || DefaultImg}
+                          src={pet?.photos[0]?.full || DefaultImg}
                           alt={pet.age}
                         />
                       </div>
-                      <div className=" top-[-10px] h-[70px]  bg-white">
-                        <div className="flex rounded-tl-3xl rounded-tr-3xl relative h-[9px] top-[-8px]"></div>
+                      <div className=" top-[-10px] h-[70px]  bg-white  rounded-b-lg">
+                        <div className="flex rounded-tl-3xl rounded-tr-3xl relative h-[9px]top-[-8px]"></div>
                         <div className="h-8 ">
                           <div className=" text-constPurple text-xl inline-flex">
                             {pet.name.slice(0, 10)}
@@ -68,13 +68,13 @@ const MainPage = () => {
                       </div>
 
                       <div className="size-14 p-2.5 top-[-293px] left-[85px] relative rounded-[22.50px] justify-center items-center inline-flex">
-                        <div className=" relative flex-col justify-start items-start flex">
-                          <img src={LikeIcon} alt=""/>
+                        <div className="relative flex-col justify-start items-start flex">
+                          <img src={LikeIcon} alt="" />
                         </div>
                       </div>
                     </div>
-                  </div>
-                </Link>
+                  </Link>
+                </div>
               );
             })}
             <PetCard
@@ -110,12 +110,12 @@ const MainPage = () => {
           <div className="flex flex-wrap justify-center text-center mb-[50px]">
             {data?.slice(7, 11)?.map((pet: response, i: number) => {
               return (
-                <Link to={`/detail/${pet.id}`}>
-                  <div
-                    key={i}
-                    className="w-auto mx-2 h-[301.2px] mb-4 cursor-pointer"
-                  >
-                    <div className="w-[231.2px] h-[301.2px] mt-6 bg-opacity-0shadow hover:shadow-lg">
+                <div
+                  key={i}
+                  className="w-auto mx-2 h-[301.2px] mb-4 cursor-pointer"
+                >
+                  <Link to={`/detail/${pet.id}`}>
+                    <div className="w-[231.2px] h-[301.2px] mt-6 bg-opacity-0shadow hover:shadow-lg shadow rounded-b-lg">
                       <div className=" bg-zinc-200 rounded-tl-lg rounded-tr-lg">
                         <img
                           className="w-[231.2px] rounded-tl-lg rounded-tr-lg object-cover h-[231.20px]"
@@ -138,8 +138,8 @@ const MainPage = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
-                </Link>
+                  </Link>
+                </div>
               );
             })}
 

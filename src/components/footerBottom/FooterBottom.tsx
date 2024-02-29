@@ -15,11 +15,13 @@ const FooterBottom = () => {
         </div>
       </div>
       <div className="flex mx-auto lg:mx-0 md:my-0 md:ms-auto order-1 md:order-2 my-[30px]">
-        {FooterImg.map((img) => {
+        {FooterImg.map((img, i) => {
           return (
-            <Link to={"/"}>
+            <div key={i}>
+              <Link to={"/"}>
               <img className="h-[22px] w-[22px] mx-[15px]" src={img} alt="" />
             </Link>
+            </div>
           );
         })}
       </div>

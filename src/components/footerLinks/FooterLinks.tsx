@@ -4,9 +4,9 @@ import { FooterLinksList } from "../../constants/FooterLink";
 const FooterLinks = () => {
   return (
     <div className="block md:flex flex-wrap mx-auto">
-      {FooterLinksList.map((link) => {
+      {FooterLinksList.map((link, i) => {
         return (
-          <>
+          <div key={i}>
             <hr className="block md:hidden mt-7 w-full relative" />
             <div>
               <div className="inline-flex md:hidden flex-end pe-1">
@@ -16,12 +16,11 @@ const FooterLinks = () => {
                   className="inline-flex items-center  text-sm text-white md:hidden font-bold"
                   aria-controls="footer"
                 >
-                  {" "}
                   <details>
                     <summary>{link.title}</summary>
-                    {link.links.map((link) => {
+                    {link.links.map((link, index:number) => {
                       return (
-                        <ul>
+                        <ul key={index}>
                           <li>
                             <div className="mt-[11px] text-[13px] leading-none">
                               <Link to={"/"}>{link.title}</Link>
@@ -48,9 +47,9 @@ const FooterLinks = () => {
                         </div>
                       </li>
                       <li>
-                        {link.links.map((link) => {
+                        {link.links.map((link, index:number) => {
                           return (
-                            <ul>
+                            <ul key={index}>
                               <li>
                                 <div className="mt-[11px] text-[13px] leading-none">
                                   <Link to={"/"}>{link.title}</Link>
@@ -65,7 +64,7 @@ const FooterLinks = () => {
                 </div>
               </div>
             </div>
-          </>
+          </div>
         );
       })}
     </div>

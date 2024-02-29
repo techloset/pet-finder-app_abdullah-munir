@@ -7,14 +7,17 @@ interface TokenResponse {
 
 export let accessToken: string | null = null;
 
-export async function fetchToken(clientId: string, clientSecret: string) {
+export async function fetchToken(
+  CLIENT_ID: string | undefined,
+  CLIENT_SECRET: string | undefined
+) {
   try {
     const response = await axios.post<TokenResponse>(
       "https://api.petfinder.com/v2/oauth2/token",
       {
         grant_type: "client_credentials",
-        client_id: clientId,
-        client_secret: clientSecret,
+        client_id: CLIENT_ID,
+        client_secret: CLIENT_SECRET,
       }
     );
     accessToken = response.data.access_token;
@@ -26,15 +29,15 @@ export async function fetchToken(clientId: string, clientSecret: string) {
   }
 }
 
-const CLIENT_ID = "x6ty0NnOjoeXPkrGRLoMTXffnuhSLcsinNci8DV9bl4IlF4M9b";
-const CLIENT_SECRET = "mBD6eu0JvZ7bCYfCnsQRtBZ9hwobQEM3Q2UG7oie";
+const CLIENT_ID = process.env.REACT_APP_API_KEY;
+const CLIENT_SECRET = process.env.REACT_APP_API_SECRET;
 
 fetchToken(CLIENT_ID, CLIENT_SECRET);
 
 setInterval(async () => {
   console.log("Refreshing access token...");
   accessToken = await fetchToken(CLIENT_ID, CLIENT_SECRET);
-}, 60 * 60 * 1000); // Refresh every hour
+}, 60 * 60 * 1000);
 
 export async function createPetFinderInstance() {
   try {
