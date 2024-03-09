@@ -4,7 +4,7 @@ import { FooterImg } from "../../constants/FooterLink";
 
 const FooterBottom = () => {
   return (
-    <div className="flex flex-wrap items-center bg-purple-950 min-h-[70px] px-[50px]">
+    <div className="flex flex-wrap items-center bg-customPurple min-h-[70px] px-[50px] mx-10 ml-[7%]">
       <div className="flex flex-col mx-auto lg:mx-0 lg:me-auto lg:flex-row flex-wrap order-2 md:order-1">
         <div className="text-white text-xs text-center font-normal font-['Helvetica'] leading-tight pe-[12.89px]">
           &copy;2023 Petfinder.com

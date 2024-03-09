@@ -82,8 +82,8 @@ const MainPage = () => {
               availability="available on Petfinder"
             />
           </div>
-          <div className="flex flex-wrap justify-center text-center ">
-            <div className="w-auto mb-[79.59px] h-12 text-center text-neutral-600 text-[38px] uppercase leading-[45.60px]">
+          <div className="">
+            <div className="mb-[79.59px] h-12 text-center text-neutral-600 text-[38px] uppercase leading-[45.60px]">
               Planning to adopt a pet?
             </div>
 

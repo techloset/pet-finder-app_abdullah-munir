@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { createPetFinderInstance } from "../../utilities/axios/FetchApi";
+import { createPetFinderInstance } from "../../utilities/ferchApi/FetchApi";
 import { OrganizationData } from "../../constants/Types";
 
 interface ApiState {
@@ -10,7 +10,7 @@ interface ApiState {
 
 // Initial state
 const initialState: ApiState = {
-  organizationData: null, // Update to null instead of empty array
+  organizationData: null,
   status: "idle",
   error: null,
 };

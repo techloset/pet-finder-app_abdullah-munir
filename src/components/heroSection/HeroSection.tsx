@@ -10,17 +10,17 @@ export default function HeroSection() {
       <div className="h-[410px] shadow bg-center bg-cover BackgroundImg">
         <form className="flex pt-5 justify-center">
           <div className="w-full max-w-[808px]">
-            <div className=" relative h-[60px] grid grid-cols-7 sm:mb-[90px] rounded-lg border-2 bg-white">
-              <div className="col-span-3">
+            <div className="flex relative h-[60px] rounded-lg border-2 bg-white">
+              <div className="flex-1">
                 <input
                   type="search"
                   id="default-search"
-                  className="w-full h-[55px] p-4 ps-4 text-zinc-500 hover:border-purple-700  hover:border-b-4 text-base font-normal border rounded-lg"
+                  className="w-full h-[55px] p-4 ps-4 text-zinc-500 hover:border-purple-700 hover:border-b-4 text-base font-normal border rounded-lg"
                   placeholder="Search Terrier, Kitten, etc."
                   required
                 />
               </div>
-              <div className=" col-span-3">
+              <div className="flex-1">
                 <input
                   type="search"
                   id="default-search-zip"
@@ -29,10 +29,10 @@ export default function HeroSection() {
                   required
                 />
               </div>
-              <div className="bg-white hover:border-purple-700 hover:border-b-4 border rounded-lg text-center">
+              <div className="flex items-center justify-center bg-white hover:border-b-4 border rounded-lg">
                 <button
                   type="submit"
-                  className="text-white absolute end-2 bottom-2.5 focus:ring-4 focus:outline-none font-medium hover:border-purple-700 hover:border-b-4 border rounded-lg"
+                  className="text-white focus:ring-4 focus:outline-none font-medium hover:border-purple-700 hover:border-b-4 border rounded-lg"
                 >
                   <img
                     src={SearchIcon}

@@ -26,7 +26,7 @@ export default function Navbar() {
   return (
     <>
       <nav className="">
-        <div className="max-w-screen-xl flex flex-wrap items-center mx-auto">
+        <div className="max-w-screen-xl flex flex-wrap items-center mx-auto -my-1">
           <div className="flex flex-wrap items-center">
             <Link to={"/"} className="flex items-center space-x-3">
               <img
@@ -94,7 +94,7 @@ export default function Navbar() {
             <img src={HeartIcon} alt="heart-icon" />
           </div>
 
-          <div className="md:border-[1px] md:border-grey-100 h-[70px] "></div>
+          <div className="md:border-[1px] md:border-grey-100 h-[60px] "></div>
 
           <div className="inline-flex md:hidden flex-end pe-1">
             <button
@@ -118,13 +118,13 @@ export default function Navbar() {
               <div className="flex flex-wrap ms-auto pe-2 lg:m-0">
                 <button
                   type="button"
-                  className="text-black font-[arial] font-bold rounded-lg text-sm px-4 py-2 text-center focus:ring-blue-800"
+                  className="text-customGray font-[arial] font-bold rounded-lg text-sm px-4 py-2 text-center focus:ring-blue-800"
                 >
                   Signup
                 </button>
                 <button
                   type="button"
-                  className="text-black font-[arial] font-bold rounded-lg text-sm px-4 py-2 text-center focus:ring-blue-800"
+                  className="text-customGray font-[arial] font-bold rounded-lg text-sm px-4 py-2 text-center focus:ring-blue-800"
                 >
                   Login
                 </button>

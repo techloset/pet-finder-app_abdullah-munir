@@ -11,16 +11,16 @@ import { BrowserRouter } from "react-router-dom";
 import { store } from "./redux/store/store.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <Provider store={store}>
-    <React.StrictMode>
+  <React.StrictMode>
+    <Provider store={store}>
       <BrowserRouter>
         <Learn />
         <Navbar />
         <App />
         <Footer />
       </BrowserRouter>
-    </React.StrictMode>
-  </Provider>
+    </Provider>
+  </React.StrictMode>
 );
 
 reportWebVitals();

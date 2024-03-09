@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const FooterBottomLink = () => {
   return (
-    <div className="flex flex-wrap justify-center py-[42px] bg-violet-800">
+    <div className="flex flex-wrap justify-center py-[42px] mx-0 lg:mx-32">
       <Link
         to={"/"}
         className="mx-[16.5px] py-2 text-white text-xs font-['Helvetica'] leading-tight cursor-pointer"
@@ -57,6 +57,13 @@ const FooterBottomLink = () => {
         className="mx-[16.5px] py-2 text-white text-xs font-['Helvetica'] leading-tight cursor-pointer"
       >
         Accessibility
+      </Link>
+      <div className="w-px h-2.5 my-auto bg-white"></div>
+      <Link
+        to={"/"}
+        className="mx-[16.5px] py-2 text-white text-xs font-['Helvetica'] leading-tight cursor-pointer"
+      >
+        About Our Ads
       </Link>
     </div>
   );

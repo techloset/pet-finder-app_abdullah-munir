@@ -3,6 +3,7 @@ import Home from './src/pages/home/Home';
 import Detail from './src/pages/detail/Detail';
 
 
+
 function Router(): JSX.Element {
   return (
     <>
