@@ -29,8 +29,8 @@ export async function fetchToken(
   }
 }
 
-const CLIENT_ID = process.env.REACT_APP_API_KEY;
-const CLIENT_SECRET = process.env.REACT_APP_API_SECRET;
+const CLIENT_ID = import.meta.env.VITE_APP_API_KEY;
+const CLIENT_SECRET = import.meta.env.VITE_APP_API_SECRET;
 
 fetchToken(CLIENT_ID, CLIENT_SECRET);
 
