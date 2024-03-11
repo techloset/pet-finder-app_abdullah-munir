@@ -5,8 +5,8 @@ export default defineConfig({
   plugins: [
     react(),
     EnvironmentPlugin({
-      VITE_APP_API_KEY: process.env.REACT_APP_API_KEY,
-      VITE_APP_API_SECRET: process.env.REACT_APP_API_SECRET,
+      VITE_APP_API_KEY: process.env.REACT_APP_API_KEY as  string | undefined,
+      VITE_APP_API_SECRET: process.env.REACT_APP_API_SECRET as  string | undefined,
     }),
   ],
 });
